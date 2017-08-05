@@ -3,7 +3,7 @@ parameters:
     bin_dir: vendor/bin
     tasks:
         phpcs: 
-            standard: "vendor/leaphub/phpcs-symfony2-standard/leaphub/phpcs/Symfony2/"
+            standard: psr2
             show_warnings: true
             tab_width: ~
             whitelist_patterns: []
@@ -13,9 +13,7 @@ parameters:
             triggered_by: [php]
         phpcsfixer: 
             config_file: ~
-            config: sf23
             fixers: []
-            level: psr2
             verbose: true
         phpcsfixer2: ~
         phplint: 

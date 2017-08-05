@@ -1,7 +1,11 @@
 <?php declare(strict_types=1);
 
-class TestClass {
-    public function foo($x) {
+namespace Codecheck;
+
+class TestClass
+{
+    public function someMethod($input)
+    {
         return 1111;
-    }    
+    }
 }

@@ -27,7 +27,8 @@ ADD . /var/www/codecheck
 RUN aptitude install vim -y
 RUN su - igor -c 'cd /var/www/codecheck && composer require --dev phpro/grumphp'
 # vendor/bin/grumphp run
-
+RUN git config --global user.email "igor.budasov@gmail.com"
+RUN git config --global user.name "Igor Budasov"
 
 
 EXPOSE 8000
