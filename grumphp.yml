@@ -1,0 +1,32 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    tasks:
+        phpcs: 
+            standard: "vendor/leaphub/phpcs-symfony2-standard/leaphub/phpcs/Symfony2/"
+            show_warnings: true
+            tab_width: ~
+            whitelist_patterns: []
+            encoding: ~
+            ignore_patterns: []
+            sniffs: []
+            triggered_by: [php]
+        phpcsfixer: 
+            config_file: ~
+            config: sf23
+            fixers: []
+            level: psr2
+            verbose: true
+        phpcsfixer2: ~
+        phplint: 
+            exclude: []
+            jobs: ~
+            triggered_by: ['php', 'phtml', 'php3', 'php4', 'php5']
+        phpmd: 
+            exclude: []
+            ruleset: ['cleancode', 'codesize', 'naming']
+            triggered_by: ['php']
+        phpspec: ~
+        phpstan: ~
+        xmllint: ~
+        yamllint: ~
