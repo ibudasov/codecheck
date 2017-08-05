@@ -1,6 +1,7 @@
 FROM thatsamguy/trusty-php71
 
 RUN apt-get update
+RUN aptitude install vim -y
 
 # installing composer 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -13,24 +14,9 @@ RUN echo "date.timezone = Europe/Prague" >> /etc/php.ini
 
 # cloning the repo with dirty user hack
 RUN adduser --disabled-password --gecos "" igor
-# RUN mkdir /var/www/ecochain
-# RUN chmod 777 /var/www/ecochain
-# RUN su - igor -c 'git clone https://github.com/ibudasov/ecochain.git /var/www/ecochain'
-# RUN su - igor -c 'cd /var/www/ecochain && composer install'
-# RUN su - igor -c 'cd /var/www/ecochain && bin/console assets:install'
 
 #codecheck
 RUN mkdir /var/www/codecheck
 RUN chmod 777 /var/www/codecheck
-ADD . /var/www/codecheck
-
-RUN aptitude install vim -y
-RUN su - igor -c 'cd /var/www/codecheck && composer require --dev phpro/grumphp'
-# vendor/bin/grumphp run
-RUN git config --global user.email "igor.budasov@gmail.com"
-RUN git config --global user.name "Igor Budasov"
-
-
-EXPOSE 8000
-
-CMD ["top"]
+RUN su - igor -c 'git clone https://github.com/ibudasov/codecheck.git /var/www/codecheck'
+RUN su - igor -c 'cd /var/www/codecheck && composer install'
