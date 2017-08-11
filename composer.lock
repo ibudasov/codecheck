@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a01f001ace4e88a8ce0ebd82a6bae207",
+    "content-hash": "913fe4f9abbf6e8b6d82c539a6d7c122",
     "packages": [],
     "packages-dev": [
         {
@@ -508,6 +508,59 @@
                 "parser"
             ],
             "time": "2014-09-09T13:34:57+00:00"
+        },
+        {
+            "name": "etsy/phan",
+            "version": "0.9.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/etsy/phan.git",
+                "reference": "e16ea3a01fdb4b38cd12d411200a1926ed56dd2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/etsy/phan/zipball/e16ea3a01fdb4b38cd12d411200a1926ed56dd2a",
+                "reference": "e16ea3a01fdb4b38cd12d411200a1926ed56dd2a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ast": "^0.1.4",
+                "php": "~7.1.0",
+                "symfony/console": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2.1"
+            },
+            "bin": [
+                "phan",
+                "phan_client",
+                "tocheckstyle"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Phan\\": "src/Phan"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rasmus Lerdorf"
+                },
+                {
+                    "name": "Andrew S. Morrison"
+                }
+            ],
+            "description": "A static analyzer for PHP",
+            "keywords": [
+                "analyzer",
+                "php",
+                "static"
+            ],
+            "time": "2017-07-11T15:55:24+00:00"
         },
         {
             "name": "friendsofphp/php-cs-fixer",

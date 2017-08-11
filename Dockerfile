@@ -15,6 +15,12 @@ RUN echo "date.timezone = Europe/Prague" >> /etc/php.ini
 # cloning the repo with dirty user hack
 RUN adduser --disabled-password --gecos "" igor
 
+# ast
+RUN sudo apt-get install php7.1-dev
+RUN sudo pecl channel-update pecl.php.net         
+RUN sudo pecl install ast 
+RUN sudo echo "extension=ast.so"  >> /etc/php/7.1/cli/php.ini
+
 #codecheck
 RUN mkdir /var/www/codecheck
 RUN chmod 777 /var/www/codecheck

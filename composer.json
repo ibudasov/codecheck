@@ -12,6 +12,7 @@
         "friendsofphp/php-cs-fixer": "^2.4",
         "phpmd/phpmd": "^2.6",
         "phpspec/phpspec": "^4.0",
-        "phpstan/phpstan": "^0.8.0"
+        "phpstan/phpstan": "^0.8.0",
+        "etsy/phan": "^0.9.3"
     }
 }

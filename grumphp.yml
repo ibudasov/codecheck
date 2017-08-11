@@ -28,3 +28,8 @@ parameters:
         phpstan: ~
         xmllint: ~
         yamllint: ~
+        phan:
+            config_file: .phan/config.php
+            output_mode: text
+            output: null
+            triggered_by: [php]
