@@ -33,4 +33,17 @@ return [
     "exclude_analysis_directory_list" => [
         'vendor/'
     ],
+    // If enabled, check all methods that override a
+    // parent method to make sure its signature is
+    // compatible with the parent's. This check
+    // can add quite a bit of time to the analysis.
+    'analyze_signature_compatibility' => true,
+    // Set to true in order to attempt to detect dead
+    // (unreferenced) code. Keep in mind that the
+    // results will only be a guess given that classes,
+    // properties, constants and methods can be referenced
+    // as variables (like `$class->$property` or
+    // `$class->$method()`) in ways that we're unable
+    // to make sense of.
+    'dead_code_detection' => false,
 ];
